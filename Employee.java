@@ -1,43 +1,26 @@
 public class Employee {
-    private String name;
-    private double rate;
-    private double hours;
-    private double salary;
+    String name;
+    int employeeId;
+    String department;
+    double salary;
 
-    public Employee(String name, double rate, double hours){
+    public Employee(String name, int employeeId, String department, double salary) {
         this.name = name;
-        this.rate = rate;
-        this.hours = hours;
+        this.employeeId = employeeId;
+        this.department = department;
+        this.salary = salary;
     }
 
-    public double calculateRegularPay(){
-        if (hours <= 40) {
-            return salary = rate * hours;
-        }
-        else {
-            return salary = (rate * 40);
-        }
+    public void displayInfo(){
+        System.out.println("Enter employee name: " + name);
+        System.out.println("Enter employeeID: " + employeeId);
+        System.out.println("Enter your department: " + department);
+        System.out.println("Enter your salary: " + salary);
+        System.out.println("------------------------------");
     }
 
-    public double calculateOvertimePay() {
-        if (hours > 40) {
-            return salary = (hours - 40) * rate * 1.5;
-        } else {
-            return 0;
-        }
-    }
-
-    public double calculateSalary(){
-        return calculateRegularPay() + calculateOvertimePay();
-    }
-
-    public void displayEmployeeInfo(){
-        System.out.println("Enter Employee name: " + name);
-        System.out.println("Enter Hourly rate: " + rate);
-        System.out.println("Enter Hours worked: " + hours);
-        System.out.println("Enter Regular Pay: " + calculateRegularPay());
-        System.out.println("Enter Overtime Pay: " + calculateOvertimePay());
-        System.out.println("Enter Salary: " + calculateSalary());
-        System.out.println("-----------------------------------------------------");
+    public void SalaryRaise(double amount){
+        salary += amount;
+        System.out.println(name + " 's new salary is: $" + salary);
     }
 }
