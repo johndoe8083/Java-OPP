@@ -15,7 +15,6 @@ public class Product {
         System.out.println("Enter product name: " + product);
         System.out.println("Enter Price: " + price);
         System.out.println("Enter Quantity: " + quantity);
-        System.out.println("----------------------------------");
     }
 
     public void calculateTotal(){

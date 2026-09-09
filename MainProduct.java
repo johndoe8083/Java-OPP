@@ -1,18 +1,27 @@
-public class MainProduct {
+import java.util.Scanner;
+
+public class MainProduct{
     public static void main(String[] args){
-        Product IOS = new Product("Laptop", 12500.00, 1);
-        Product android = new Product("Infinix", 2500, 3);
+        Scanner scanner = new Scanner(System.in);
 
-        IOS.displayOrder();
+        System.out.print("Enter product name: ");
+        String product = scanner.nextLine();
+
+        System.out.print("Enter product price: ");
+        double price = scanner.nextDouble();
+
+        System.out.print("Enter product quantity: ");
+        int quantity = scanner.nextInt();
+
+        System.out.println("----------------------------------");
+
+        Product android = new Product(product, price, quantity);
+
         android.displayOrder();
-
-        IOS.calculateTotal();
         android.calculateTotal();
-
-        IOS.calculateDiscount();
         android.calculateDiscount();
-
-        IOS.calculateFinalAmount();
         android.calculateFinalAmount();
+
+        scanner.close();
     }
 }

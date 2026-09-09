@@ -4,20 +4,19 @@ public class MainEmployee {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Employee Name: ");
+        System.out.print("Enter Employee name: ");
         String name = scanner.nextLine();
 
-        System.out.print("Employee Name: ");
+        System.out.print("Enter Employee rate: ");
         double rate = scanner.nextDouble();
 
-        System.out.print("Employee Name: ");
+        System.out.print("Enter Employee hours: ");
         double hours = scanner.nextDouble();
+
+        System.out.println("------------------------------------------");
 
         Employee cubillas = new Employee(name, rate, hours);
 
-        cubillas.calculateRegularPay();
-        cubillas.calculateOvertimePay();
-        cubillas.calculateSalary();
         cubillas.displayEmployeeInfo();
 
         scanner.close();
